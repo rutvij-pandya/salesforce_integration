@@ -9,7 +9,7 @@ module Salesforce
                               :security_token => SALESFORCE["security_token"],
                               :client_id      => SALESFORCE["client_id"],
                               :client_secret  => SALESFORCE["client_secret"],
-                              :api_version => 39.0
+                              :api_version    => SALESFORCE["api_version"]
       @client.authenticate!
     end
 

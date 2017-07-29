@@ -1,9 +1,10 @@
 common: &common
-  username: '<username>'
-  password: '<password>'
-  security_token: '<security_token>'
-  client_id: '<client_id>'
-  client_secret: '<client_secret>'
+  api_version: '39.0'
+  username: 'rutvij.pandya.2010@gmail.com'
+  password: 'Idy@dec22sf'
+  security_token: 'S46dSbFeJibvDzpwEvtojUdZO'
+  client_id: '3MVG9d8..z.hDcPKKwC0m36n8pHNmAmY6XmvCqgCiHy3uAHodgIaLDbpwtw_c_Yv70Zz20QyFLwyKTHutshzU'
+  client_secret: '6720377901656168755'
 #  host: 'test.salesforce.com'
 
 # You can connect to sandbox orgs by specifying a host. The default host is 'login.salesforce.com'

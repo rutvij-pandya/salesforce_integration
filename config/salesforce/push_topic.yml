@@ -1,0 +1,5 @@
+api_version: ApiVersion
+name: Name
+description: Description
+notify_for_fields: NotifyForFields
+query: Query

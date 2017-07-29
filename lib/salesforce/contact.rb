@@ -2,12 +2,12 @@ module Salesforce
   class Contact < Base
 
     attr :fields_map
-    attr :sf_obj_name
+
+    SF_OBJ_NAME = "Contact"
 
     def initialize
       super()
       @fields_map = YAML.load_file(Rails.root.join("config", "salesforce", "contact.yml"))
-      @sf_obj_name = "Contact"
     end
 
     def find_by_email(user_email)

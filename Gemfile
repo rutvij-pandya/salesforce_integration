@@ -25,6 +25,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'restforce', '~> 2.5.3'
+gem 'faye'
 gem 'devise', '3.4.1'
 gem 'bootstrap-sass'
 gem 'delayed_job_active_record'

@@ -1,0 +1,5 @@
+"----- stream started "
+"------- stream ------- "
+"{\"event\"=>{\"createdDate\"=>\"2017-07-28T11:52:40.683Z\", \"replayId\"=>3, \"type\"=>\"updated\"}, \"sobject\"=>{\"Status\"=>\"Working - Contacted\", \"Id\"=>\"00Q7F000001D2xtUAC\"}}"
+"------- stream ------- "
+"{\"event\"=>{\"createdDate\"=>\"2017-07-28T11:55:16.895Z\", \"replayId\"=>4, \"type\"=>\"updated\"}, \"sobject\"=>{\"Status\"=>\"Working - Contacted\", \"Id\"=>\"00Q7F000001D2xtUAC\"}}"

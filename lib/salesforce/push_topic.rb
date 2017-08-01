@@ -9,7 +9,7 @@ module Salesforce
 
     def initialize
       super()
-      @fields_map = YAML.load_file(Rails.root.join("config", "salesforce", "push_topic.yml"))
+      @fields_map = load_fields_map(SF_OBJ_NAME)
     end
 
   end

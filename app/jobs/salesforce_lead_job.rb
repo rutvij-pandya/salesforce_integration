@@ -7,7 +7,7 @@ class SalesforceLeadJob < Struct.new(:user_id)
     if user.lead.present?
       # update data in Salesforce only if Lead is still Open
       # do not update data once lead gets converted/ cancelled
-      if user.lead.status == "open"
+      if user.lead.is_open?
         entity_hash = user.attributes.merge(salesforce_id: user.lead.salesforce_id)
         sf_obj.update(Salesforce::Lead::SF_OBJ_NAME, sf_obj.fields_map, entity_hash)
       end

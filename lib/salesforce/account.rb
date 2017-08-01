@@ -7,8 +7,13 @@ module Salesforce
 
     def initialize
       super()
-      @fields_map = YAML.load_file(Rails.root.join("config", "salesforce", "account.yml"))
+      @fields_map = load_fields_map(SF_OBJ_NAME)
     end
 
+    class << self
+      def streaming_topic_query
+        "select Id, Phone, Industry from Account"
+      end
+    end
   end
 end

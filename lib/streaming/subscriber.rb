@@ -1,8 +1,7 @@
 require 'faye'
-# require "#{Rails.root}/lib/salesforce/streaming"
 
-module Salesforce
-  class StreamingHandler < Base
+module Streaming
+  class Subscriber < Salesforce::Base
 
     attr :stream_topic_name
 
@@ -15,7 +14,7 @@ module Salesforce
       begin
         subscribe_push_topic
       rescue Restforce::AuthenticationError => e
-        puts e
+        p e
       end
     end
 
@@ -23,13 +22,11 @@ module Salesforce
 
     def subscribe_push_topic
       EM.run do
-        # @client.subscribe @stream_topic_name, replay: -1 do |message|
         @client.subscribe @stream_topic_name do |message|
           begin
-            p "------- stream response ------- "
-            p message.inspect
+            Parser.new(@stream_topic_name, message['sobject']).parse_response
           rescue Exception => e
-            puts e
+            p e
           end
         end
       end

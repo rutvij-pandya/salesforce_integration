@@ -1,7 +1,7 @@
 class CreateLeads < ActiveRecord::Migration
   def change
     create_table :leads do |t|
-      t.references :user, null: false, defailt: 0, index: true
+      t.references :user, null: false, default: 0, index: true
       t.string :salesforce_id, index: true
       t.integer :status, limit: 1
 
